@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inglês • Metodologia Livre</title>
+    <link rel="stylesheet" href="../CSS/materia.css" />
+    <link rel="icon" href="../assets/img/Logo.png" />
+  
+<link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="principal.html">
+        <img src="../assets/img/Logo.png" alt="Logo Metodologia Livre" class="logoimg" />
+        Metodologia Livre
+      </a>
+  </div>
+<nav aria-label="Navegação principal">
+  <ul class="nav-links">
+    <li><a id="menu-toggle" href="#" aria-controls="dropdown-menu" aria-expanded="false">☰ Menu</a></li>
+  </ul>
+</nav>
+</header>
+
+<div id="dropdown-menu" class="dropdown hidden" role="menu" aria-hidden="true">
+  <ul>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="nossa-metodologia.html">Nossa Metodologia</a></li>
+    <li><a href="Contato.html">Nossos Contatos</a></li>
+    <li><a href="Ensinos.html#sociedade">Ensinos</a></li>
+  </ul>
+</div>
+
+<main class="subject" role="main">
+  <article class="subject-card" aria-labelledby="ingles-title">
+    <h1 id="ingles-title">Inglês</h1>
+    <p class="lead">Comunicação prática e leitura.</p>
+    <p>Vocabulário, gramática e verbos.</p><p>Expressões do dia a dia.</p>
+    <div class="subject-actions">
+      <a href="Ensinos.html" class="btn">Voltar aos Ensinos</a>
+      <a href="principal.html" class="link-ghost">Início</a>
+      <button class="btn-secondary" type="button" data-quiz-open>Questionário</button>
+    </div>
+  <section id="quiz" class="quiz hidden" aria-label="Questionário"></section>
+  <script id="quiz-data" type="application/json">{"questions": [{"question": "Plural de 'child'", "options": ["childs", "childes", "children", "child"], "answerIndex": 2, "explain": "Forma irregular: children."}, {"question": "Verbo 'to be' no presente (I)", "options": ["I am", "I is", "I are", "I be"], "answerIndex": 0, "explain": "I am."}, {"question": "Artigo indefinido antes de vogal", "options": ["a", "an", "the", "—"], "answerIndex": 1, "explain": "an apple, an hour."}, {"question": "Passado de 'go'", "options": ["goed", "goes", "went", "gone"], "answerIndex": 2, "explain": "Irregular: went."}, {"question": "Preposição correta: 'interested ___'", "options": ["in", "on", "at", "to"], "answerIndex": 0, "explain": "interested in."}]}</script>
+  <script src="../JavaScript/quiz.js"></script>
+</article>
+</main>
+
+
+<script src="../JavaScript/menu.js"></script>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nossa Metodologia • Metodologia Livre</title>
+    <link rel="stylesheet" href="../CSS/materia.css" />
+    <link rel="stylesheet" href="../CSS/metodologia.css" />
+    <link rel="icon" href="../assets/img/Logo.png" />
+  
+<link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="principal.html">
+        <img src="../assets/img/Logo.png" alt="Logo Metodologia Livre" class="logoimg" />
+        Metodologia Livre
+      </a>
+  </div>
+<nav aria-label="Navegação principal">
+  <ul class="nav-links">
+    <li><a id="menu-toggle" href="#" aria-controls="dropdown-menu" aria-expanded="false">☰ Menu</a></li>
+  </ul>
+</nav>
+</header>
+
+<div id="dropdown-menu" class="dropdown hidden" role="menu" aria-hidden="true">
+  <ul>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="nossa-metodologia.html" aria-current="page">Nossa Metodologia</a></li>
+    <li><a href="Contato.html">Nossos Contatos</a></li>
+    <li><a href="Ensinos.html">Ensinos</a></li>
+  </ul>
+</div>
+
+<main class="subject" role="main">
+  <article class="subject-card">
+
+    <h1>Nossa Metodologia</h1>
+    <p class="lead">Técnicas práticas de estudo com foco e ritmo.</p>
+
+    <section id="tab-pomodoro" class="method-tab">
+      <p class="tip"><strong>Dica:</strong> Você pode ajustar os tempos e ciclos abaixo conforme seu ritmo.</p>
+      <h3>Boas práticas</h3>
+      <ul class="method-list">
+        <li>Feche notificações e use fone de ouvido, se possível.</li>
+        <li>Mantenha água por perto e evite ficar com fome durante o foco.</li>
+        <li>Use a pausa curta para alongar, levantar e descansar os olhos.</li>
+        <li>Após 4 ciclos, faça uma pausa longa para consolidar a atenção.</li>
+      </ul>
+    <h2>Técnica Pomodoro (25/5)</h2>
+    <div class="pomo-timer" role="group" aria-label="Timer Pomodoro">
+      <div class="pomo-display"><span id="pomo-mm">25</span>:<span id="pomo-ss">00</span></div>
+      <div class="pomo-controls">
+        <button id="pomo-start" class="btn">Iniciar</button>
+        <button id="pomo-pause" class="btn-secondary">Pausar</button>
+        <button id="pomo-reset" class="link-ghost">Zerar</button>
+      </div>
+    <div class="pomo-config">
+      <label>Foco (min) <input id="focus" type="number" min="1" max="90" value="25"></label>
+      <label>Pausa curta (min) <input id="short" type="number" min="1" max="30" value="5"></label>
+      <label>Pausa longa (min) <input id="long" type="number" min="1" max="60" value="15"></label>
+      <label>Ciclos <input id="pomo-cycles" type="number" min="1" max="12" value="4"></label>
+      <div class="pomo-phase"><strong>Fase:</strong> <span id="pomo-phase">Foco</span> • Ciclo <span id="pomo-cycle">1</span></div>
+      <div class="pomo-progress"><div id="pomo-bar"></div></div>
+    </div>
+</div>
+
+<p>Estude em blocos de <strong>25 minutos</strong> de foco profundo, seguidos por <strong>5 minutos</strong> de pausa. Após quatro ciclos, faça um intervalo maior (15–20 min). Pomodoro ajuda a reduzir a procrastinação e treinar atenção sustentada.</p>
+
+<div class="subject-actions">
+  <a href="Ensinos.html" class="btn">Voltar aos Ensinos</a>
+  <a href="principal.html" class="link-ghost">Início</a>
+</div>
+
+<script>
+  // WebAudio generator (binaural + noise) — safe controls with preset defaults
+  (() => {
+  const DEFAULTS = { binaural40: 0.18, binaural15: 0.18, white: 0.03, pink: 0.025 };
+  let ctx, gMaster, left, right, noiseNode, playing = false;
+
+  const preset = document.getElementById('preset');
+  const vol = document.getElementById('volume');
+  const playBtn = document.getElementById('toggle-audio');
+  const stopBtn = document.getElementById('stop-audio');
+
+  function defaultVol(){ return DEFAULTS[preset?.value] ?? 0.18; }
+
+  function ensureCtx(){
+  if (ctx) return;
+  ctx = new (window.AudioContext || window.webkitAudioContext)();
+  gMaster = ctx.createGain();
+  gMaster.gain.value = parseFloat(vol.value || defaultVol());
+  gMaster.connect(ctx.destination);
+  }
+
+  function stopAll(){
+  [left, right].forEach(n => { try{ n && n.stop(0); }catch(e){} });
+  left = right = null;
+  if (noiseNode){
+  try{
+  if (typeof noiseNode.stop === 'function'){ noiseNode.stop(0); }
+  if (typeof noiseNode.disconnect === 'function'){ noiseNode.disconnect(); }
+  if ('onaudioprocess' in noiseNode){ noiseNode.onaudioprocess = null; }
+  }catch(e){}
+  noiseNode = null;
+  }
+  playing = false;
+  playBtn.textContent = "▶️ Reproduzir";
+  }
+
+  function playBinaural(base, diff){
+  ensureCtx(); stopAll();
+  left = ctx.createOscillator(); right = ctx.createOscillator();
+  const gL = ctx.createGain(); const gR = ctx.createGain();
+  left.type = 'sine'; right.type = 'sine';
+  left.frequency.value = base; right.frequency.value = base + diff;
+  gL.gain.value = 0.2; gR.gain.value = 0.2;
+  const pL = ctx.createStereoPanner(); const pR = ctx.createStereoPanner();
+  pL.pan.value = -1; pR.pan.value = +1;
+  left.connect(gL).connect(pL).connect(gMaster);
+  right.connect(gR).connect(pR).connect(gMaster);
+  left.start(); right.start();
+  playing = true; playBtn.textContent = "⏸️ Pausar";
+  }
+
+  function whiteNoise(){
+  ensureCtx(); stopAll();
+  const bufferSize = 2 * ctx.sampleRate;
+  const noiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+  const output = noiseBuffer.getChannelData(0);
+  for (let i = 0; i < bufferSize; i++) { output[i] = Math.random() * 2 - 1; }
+  noiseNode = ctx.createBufferSource();
+  noiseNode.buffer = noiseBuffer; noiseNode.loop = true;
+  noiseNode.connect(gMaster); noiseNode.start();
+  playing = true; playBtn.textContent = "⏸️ Pausar";
+  }
+
+  function pinkNoise(){
+  ensureCtx(); stopAll();
+  const bufferSize = 16384;
+  const node = ctx.createScriptProcessor(bufferSize, 1, 1);
+  let b0=0,b1=0,b2=0,b3=0,b4=0,b5=0,b6=0;
+  node.onaudioprocess = e => {
+  const out = e.outputBuffer.getChannelData(0);
+  for (let i=0; i<bufferSize; i++){
+  const white = Math.random()*2-1;
+  b0 = 0.99886*b0 + white*0.0555179;
+  b1 = 0.99332*b1 + white*0.0750759;
+  b2 = 0.96900*b2 + white*0.1538520;
+  b3 = 0.86650*b3 + white*0.3104856;
+  b4 = 0.55000*b4 + white*0.5329522;
+  b5 = -0.7616*b5 - white*0.0168980;
+  out[i] = b0 + b1 + b2 + b3 + b4 + b5 + b6 + white*0.5362;
+  out[i] *= 0.11;
+  b6 = white*0.115926;
+  }
+  };
+  noiseNode = node; node.connect(gMaster);
+  playing = true; playBtn.textContent = "⏸️ Pausar";
+  }
+
+  function playCurrent(){
+  const v = preset.value;
+  if (v === 'binaural40') playBinaural(400, 40);
+  else if (v === 'binaural15') playBinaural(430, 15);
+  else if (v === 'white') whiteNoise();
+  else if (v === 'pink') pinkNoise();
+  }
+
+  playBtn.addEventListener('click', () => {
+  ensureCtx();
+  if (!playing){
+  if (ctx.state === 'suspended'){ ctx.resume(); }
+  const dv = defaultVol();
+  vol.value = dv; gMaster.gain.value = dv;
+  playCurrent();
+  } else {
+  stopAll();
+  }
+  });
+
+  stopBtn.addEventListener('click', () => { stopAll(); });
+
+  vol.addEventListener('input', () => { if (gMaster){ gMaster.gain.value = parseFloat(vol.value); } });
+
+  preset.addEventListener('change', () => {
+  stopAll();
+  const dv = defaultVol();
+  vol.value = dv; if (gMaster){ gMaster.gain.value = dv; }
+  // Aguarda clique em Reproduzir
+  });
+
+  // ---- Tabs (Pomodoro / Áudio) with hash + localStorage ----
+  const tabs = {
+  pomodoro: document.getElementById('tab-pomodoro'),
+  audio: document.getElementById('tab-audio'),
+  };
+  const tabBtns = document.querySelectorAll('.method-controls [data-tab]');
+  function activate(tab){
+  if(!tabs[tab]) tab = 'pomodoro';
+  Object.entries(tabs).forEach(([k, el]) => el.classList.toggle('hidden', k !== tab));
+  tabBtns.forEach(b => {
+  const on = b.dataset.tab === tab;
+  b.classList.toggle('btn', on);
+  b.classList.toggle('btn-secondary', !on);
+  b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
+  try{ localStorage.setItem('metTab', tab); }catch(e){}
+  if(location.hash.replace('#','') !== tab){ history.replaceState(null, '', '#' + tab); }
+  }
+  tabBtns.forEach(b => b.addEventListener('click', () => activate(b.dataset.tab)));
+
+  function initialTab(){
+  const h = location.hash.replace('#','');
+  if(tabs[h]) return h;
+  try{ const s = localStorage.getItem('metTab'); if(tabs[s]) return s; }catch(e){}
+  return 'pomodoro';
+  }
+  activate(initialTab());
+  })();
+</script>
+
+
+
+</article>
+</main>
+
+
+
+<script>
+/* Pomodoro Timer — fix IDs + cycle label + safe listeners (Levi) */
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const els = {
+    phase: $('pomo-phase'),
+    mm: $('pomo-mm'),
+    ss: $('pomo-ss'),
+    bar: $('pomo-bar'),
+    start: $('pomo-start'),
+    pause: $('pomo-pause'),
+    reset: $('pomo-reset'),
+    // IDs corretos conforme o HTML:
+    focus: $('focus'),
+    short: $('short'),
+    long: $('long'),
+    cycles: $('pomo-cycles'),
+    cycle: $('pomo-cycle'),
+  };
+  if (!els.start) return;
+
+  const Ctx = window.AudioContext || window.webkitAudioContext;
+  const ctxAudio = Ctx ? new Ctx() : null;
+
+  let state = { phase: 'focus', cycle: 1, total: 0, left: 0, running: false, timer: null, base: 0 };
+
+  const ms = (min) => Math.round(min * 60 * 1000);
+  function format(t){
+    const m = Math.floor(t/60000), s = Math.floor((t%60000)/1000);
+    els.mm.textContent = String(m).padStart(2,'0');
+    els.ss.textContent = String(s).padStart(2,'0');
+  }
+  function progress(){
+    const p = 1 - (state.left/state.total || 0);
+    if (els.bar) els.bar.style.width = (p * 100).toFixed(1) + '%';
+  }
+  function label(){
+    els.phase.textContent = state.phase === 'focus' ? 'Foco' : (state.phase === 'short' ? 'Pausa Curta' : 'Pausa Longa');
+    if (els.cycle) els.cycle.textContent = String(state.cycle);
+  }
+  function beep(){
+    if(!ctxAudio) return;
+    const o = ctxAudio.createOscillator(), g = ctxAudio.createGain();
+    o.type='sine'; o.frequency.value=880;
+    g.gain.value=0.001; g.connect(ctxAudio.destination); o.connect(g);
+    const t = ctxAudio.currentTime;
+    g.gain.exponentialRampToValueAtTime(0.2, t+0.02);
+    g.gain.exponentialRampToValueAtTime(0.0001, t+0.4);
+    o.start(); o.stop(t+0.45);
+  }
+  function setPhase(ph){
+    state.phase = ph;
+    const mins = ph==='focus' ? (+els.focus.value||25)
+               : ph==='short' ? (+els.short.value||5)
+               : (+els.long.value||15);
+    state.total = ms(mins);
+    state.left  = state.total;
+    state.base  = Date.now();
+    label(); format(state.left); progress();
+  }
+  function next(){
+    beep();
+    if (state.phase === 'focus'){
+      const max = +els.cycles.value || 4;
+      state.phase = (state.cycle % max === 0) ? 'long' : 'short';
+    } else {
+      if (state.phase === 'long') state.cycle = 0;
+      state.phase = 'focus';
+      state.cycle++;
+    }
+    setPhase(state.phase); // prepara a próxima fase, aguardando novo "Iniciar"
+  }
+  function tick(){
+    const elapsed = Date.now() - state.base;
+    state.left = Math.max(0, state.total - elapsed);
+    format(state.left); progress();
+    if (state.left <= 0){
+      clearInterval(state.timer);
+      state.running = false;
+      next();
+    }
+  }
+  function start(){
+    if (state.running) return;
+    if (state.left <= 0 || state.total <= 0) setPhase(state.phase);
+    state.base = Date.now() - (state.total - state.left);
+    state.timer = setInterval(tick, 250);
+    state.running = true;
+  }
+  function pause(){
+    if (!state.running) return;
+    clearInterval(state.timer);
+    state.running = false;
+  }
+  function reset(){
+    pause();
+    setPhase('focus');
+    state.cycle = 1;
+    label();
+  }
+
+  els.start.addEventListener('click', start);
+  els.pause.addEventListener('click', pause);
+  els.reset.addEventListener('click', reset);
+
+  ['focus','short','long','cycles'].forEach(k => {
+    if (els[k]) els[k].addEventListener('change', () => {
+      if (!state.running) setPhase(state.phase);
+    });
+  });
+
+  // init
+  setPhase('focus');
+})();
+</script>
+
+<script src="../JavaScript/menu.js"></script>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

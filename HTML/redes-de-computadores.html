@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redes de Computadores • Metodologia Livre</title>
+    <link rel="stylesheet" href="../CSS/materia.css" />
+    <link rel="icon" href="../assets/img/Logo.png" />
+  
+<link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="principal.html">
+        <img src="../assets/img/Logo.png" alt="Logo Metodologia Livre" class="logoimg" />
+        Metodologia Livre
+      </a>
+  </div>
+<nav aria-label="Navegação principal">
+  <ul class="nav-links">
+    <li><a id="menu-toggle" href="#" aria-controls="dropdown-menu" aria-expanded="false">☰ Menu</a></li>
+  </ul>
+</nav>
+</header>
+
+<div id="dropdown-menu" class="dropdown hidden" role="menu" aria-hidden="true">
+  <ul>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="nossa-metodologia.html">Nossa Metodologia</a></li>
+    <li><a href="Contato.html">Nossos Contatos</a></li>
+    <li><a href="Ensinos.html#tecnologia">Ensinos</a></li>
+  </ul>
+</div>
+
+<main class="subject" role="main">
+  <article class="subject-card" aria-labelledby="redes-de-computadores-title">
+    <h1 id="redes-de-computadores-title">Redes de Computadores</h1>
+    <p class="lead">Conectar dispositivos e serviços com segurança.</p>
+    <p>IP, DNS, roteadores e Wi‑Fi.</p><p>Topologias, protocolos e troubleshooting.</p>
+    <div class="subject-actions">
+      <a href="Ensinos.html" class="btn">Voltar aos Ensinos</a>
+      <a href="principal.html" class="link-ghost">Início</a>
+      <button class="btn-secondary" type="button" data-quiz-open>Questionário</button>
+    </div>
+  <section id="quiz" class="quiz hidden" aria-label="Questionário"></section>
+  <script id="quiz-data" type="application/json">{"questions": [{"question": "IP identifica", "options": ["Usuário", "Dispositivo na rede", "Senha", "Navegador"], "answerIndex": 1, "explain": "Endereço de rede."}, {"question": "LAN é", "options": ["Rede local", "Rede mundial", "Sem rede", "Rede móvel"], "answerIndex": 0, "explain": "Local Area Network."}, {"question": "Equipamento que encaminha pacotes", "options": ["Switch", "Roteador", "Hub", "Impressora"], "answerIndex": 1, "explain": "Roteador interliga redes."}, {"question": "Wi‑Fi usa", "options": ["Cabos", "Ondas de rádio", "Fibra óptica apenas", "Satélite sempre"], "answerIndex": 1, "explain": "Rede sem fio por rádio."}, {"question": "HTTPS usa protocolo", "options": ["FTP", "SMTP", "TLS/SSL", "SSH"], "answerIndex": 2, "explain": "Criptografia de transporte."}]}</script>
+  <script src="../JavaScript/quiz.js"></script>
+</article>
+</main>
+
+
+<script src="../JavaScript/menu.js"></script>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

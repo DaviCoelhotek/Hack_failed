@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Física • Metodologia Livre</title>
+    <link rel="stylesheet" href="../CSS/materia.css" />
+    <link rel="icon" href="../assets/img/Logo.png" />
+  
+<link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="principal.html">
+        <img src="../assets/img/Logo.png" alt="Logo Metodologia Livre" class="logoimg" />
+        Metodologia Livre
+      </a>
+  </div>
+<nav aria-label="Navegação principal">
+  <ul class="nav-links">
+    <li><a id="menu-toggle" href="#" aria-controls="dropdown-menu" aria-expanded="false">☰ Menu</a></li>
+  </ul>
+</nav>
+</header>
+
+<div id="dropdown-menu" class="dropdown hidden" role="menu" aria-hidden="true">
+  <ul>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="nossa-metodologia.html">Nossa Metodologia</a></li>
+    <li><a href="Contato.html">Nossos Contatos</a></li>
+    <li><a href="Ensinos.html">Ensinos</a></li>
+  </ul>
+</div>
+
+<main class="subject" role="main">
+  <article class="subject-card" aria-labelledby="fisica-title">
+    <h1 id="fisica-title">Física</h1>
+    <p class="lead">O estudo das leis naturais para explicar movimentos, energia e fenômenos do dia a dia.</p>
+    <p>Começamos por grandezas, vetores e cinemática, avançando para dinâmica (leis de Newton) e conservação de energia.</p><p>Introduzimos eletricidade, ondas e óptica com exemplos intuitivos e exercícios de aplicação.</p>
+    <div class="subject-actions">
+      <a href="Ensinos.html" class="btn">Voltar aos Ensinos</a>
+      <a href="principal.html" class="link-ghost">Início</a>
+      <button class="btn-secondary" type="button" data-quiz-open>Questionário</button>
+    </div>
+  <section id="quiz" class="quiz hidden" aria-label="Questionário"></section>
+  <script id="quiz-data" type="application/json">{"questions": [{"question": "Unidade de força no SI:", "options": ["Watt", "Newton", "Joule", "Pascal"], "answerIndex": 1, "explain": "Força é medida em Newton (N). Watt é potência; Joule, energia; Pascal, pressão."}, {"question": "Segunda lei de Newton:", "options": ["F = m/a", "F = m − a", "F = m × a", "F = a/m"], "answerIndex": 2, "explain": "A força resultante é o produto da massa pela aceleração (F = m·a)."}, {"question": "Energia potencial gravitacional depende de:", "options": ["Velocidade e massa", "Massa e altura", "Área e densidade", "Tempo e temperatura"], "answerIndex": 1, "explain": "Epg = m·g·h — depende de massa e altura (e g)."}, {"question": "Ondas sonoras são:", "options": ["Transversais no ar", "Longitudinais no ar", "Eletromagnéticas", "Luminosas"], "answerIndex": 1, "explain": "No ar, o som propaga-se como ondas longitudinais (compressões/rarefações)."}, {"question": "A carga elétrica do elétron é:", "options": ["+1,6×10⁻¹⁹ C", "+1 C", "−1,6×10⁻¹⁹ C", "−9,8 m/s²"], "answerIndex": 2, "explain": "Elétron tem carga negativa de módulo 1,6×10⁻¹⁹ coulomb."}]}</script>
+  <script src="../JavaScript/quiz.js"></script>
+</article>
+</main>
+
+
+<script src="../JavaScript/menu.js"></script>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

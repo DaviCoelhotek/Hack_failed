@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computação em Nuvem • Metodologia Livre</title>
+    <link rel="stylesheet" href="../CSS/materia.css" />
+    <link rel="icon" href="../assets/img/Logo.png" />
+  
+<link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="principal.html">
+        <img src="../assets/img/Logo.png" alt="Logo Metodologia Livre" class="logoimg" />
+        Metodologia Livre
+      </a>
+  </div>
+<nav aria-label="Navegação principal">
+  <ul class="nav-links">
+    <li><a id="menu-toggle" href="#" aria-controls="dropdown-menu" aria-expanded="false">☰ Menu</a></li>
+  </ul>
+</nav>
+</header>
+
+<div id="dropdown-menu" class="dropdown hidden" role="menu" aria-hidden="true">
+  <ul>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="nossa-metodologia.html">Nossa Metodologia</a></li>
+    <li><a href="Contato.html">Nossos Contatos</a></li>
+    <li><a href="Ensinos.html#tecnologia">Ensinos</a></li>
+  </ul>
+</div>
+
+<main class="subject" role="main">
+  <article class="subject-card" aria-labelledby="computacao-em-nuvem-title">
+    <h1 id="computacao-em-nuvem-title">Computação em Nuvem</h1>
+    <p class="lead">Infraestrutura sob demanda para escalar apps.</p>
+    <p>IaaS, PaaS, SaaS e automação.</p><p>Armazenamento de objetos, containers e custos.</p>
+    <div class="subject-actions">
+      <a href="Ensinos.html" class="btn">Voltar aos Ensinos</a>
+      <a href="principal.html" class="link-ghost">Início</a>
+      <button class="btn-secondary" type="button" data-quiz-open>Questionário</button>
+    </div>
+  <section id="quiz" class="quiz hidden" aria-label="Questionário"></section>
+  <script id="quiz-data" type="application/json">{"questions": [{"question": "IaaS fornece", "options": ["Aplicativos prontos", "Infraestrutura virtual", "Consultoria", "Banco de dados local"], "answerIndex": 1, "explain": "Máquinas virtuais, redes, armazenamento."}, {"question": "Escalar horizontalmente é", "options": ["Servidor mais potente", "Adicionar mais instâncias", "Diminuir CPU", "Mover para desktop"], "answerIndex": 1, "explain": "Mais nós em paralelo."}, {"question": "S3/Blob Storage é", "options": ["Banco relacional", "Fila", "Armazenamento de objetos", "DNS"], "answerIndex": 2, "explain": "Arquivos em buckets/containers."}, {"question": "Região (region) é", "options": ["Usuário", "Local geográfico do data center", "Senha", "Rede local"], "answerIndex": 1, "explain": "Escolha próxima ao usuário/lei."}, {"question": "Container é", "options": ["VM pesada", "Empacotamento leve de apps", "CDN", "Script bash"], "answerIndex": 1, "explain": "Isola dependências do app."}]}</script>
+  <script src="../JavaScript/quiz.js"></script>
+</article>
+</main>
+
+
+<script src="../JavaScript/menu.js"></script>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Segurança Digital • Metodologia Livre</title>
+    <link rel="stylesheet" href="../CSS/materia.css" />
+    <link rel="icon" href="../assets/img/Logo.png" />
+  
+<link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="principal.html">
+        <img src="../assets/img/Logo.png" alt="Logo Metodologia Livre" class="logoimg" />
+        Metodologia Livre
+      </a>
+  </div>
+<nav aria-label="Navegação principal">
+  <ul class="nav-links">
+    <li><a id="menu-toggle" href="#" aria-controls="dropdown-menu" aria-expanded="false">☰ Menu</a></li>
+  </ul>
+</nav>
+</header>
+
+<div id="dropdown-menu" class="dropdown hidden" role="menu" aria-hidden="true">
+  <ul>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="nossa-metodologia.html">Nossa Metodologia</a></li>
+    <li><a href="Contato.html">Nossos Contatos</a></li>
+    <li><a href="Ensinos.html#tecnologia">Ensinos</a></li>
+  </ul>
+</div>
+
+<main class="subject" role="main">
+  <article class="subject-card" aria-labelledby="seguranca-digital-title">
+    <h1 id="seguranca-digital-title">Segurança Digital</h1>
+    <p class="lead">Proteja dados e contas contra golpes e invasões.</p>
+    <p>Senhas fortes, 2FA e cuidados com links.</p><p>Privacidade, backups e atualizações de software.</p>
+    <div class="subject-actions">
+      <a href="Ensinos.html" class="btn">Voltar aos Ensinos</a>
+      <a href="principal.html" class="link-ghost">Início</a>
+      <button class="btn-secondary" type="button" data-quiz-open>Questionário</button>
+    </div>
+  <section id="quiz" class="quiz hidden" aria-label="Questionário"></section>
+  <script id="quiz-data" type="application/json">{"questions": [{"question": "Autenticação em dois fatores", "options": ["Enfraquece a conta", "Bloqueia internet", "Adiciona uma verificação extra", "Cria novos vírus"], "answerIndex": 2, "explain": "Um segundo fator além da senha."}, {"question": "Senha segura", "options": ["123456", "Data de nascimento", "Mistura de letras, números e símbolos", "Nome do cachorro"], "answerIndex": 2, "explain": "Evite dados óbvios."}, {"question": "Phishing é", "options": ["Roubo de senhas por páginas falsas", "Antivírus atualizado", "Backup em nuvem", "Rede cabeada"], "answerIndex": 0, "explain": "Golpe que imita sites/serviços para capturar dados."}, {"question": "HTTPS indica", "options": ["Conexão criptografada", "Internet lenta", "Modo avião", "Rede local"], "answerIndex": 0, "explain": "Cadeado/https usa TLS."}, {"question": "O que fazer ao receber e-mail suspeito", "options": ["Clicar no link", "Responder com dados", "Ignorar/denunciar", "Enviar para amigos"], "answerIndex": 2, "explain": "Evite clicar; reporte como spam/phishing."}]}</script>
+  <script src="../JavaScript/quiz.js"></script>
+</article>
+</main>
+
+
+<script src="../JavaScript/menu.js"></script>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

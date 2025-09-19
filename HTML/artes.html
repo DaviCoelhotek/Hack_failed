@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artes • Metodologia Livre</title>
+    <link rel="stylesheet" href="../CSS/materia.css" />
+    <link rel="icon" href="../assets/img/Logo.png" />
+  
+<link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="principal.html">
+        <img src="../assets/img/Logo.png" alt="Logo Metodologia Livre" class="logoimg" />
+        Metodologia Livre
+      </a>
+  </div>
+<nav aria-label="Navegação principal">
+  <ul class="nav-links">
+    <li><a id="menu-toggle" href="#" aria-controls="dropdown-menu" aria-expanded="false">☰ Menu</a></li>
+  </ul>
+</nav>
+</header>
+
+<div id="dropdown-menu" class="dropdown hidden" role="menu" aria-hidden="true">
+  <ul>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="nossa-metodologia.html">Nossa Metodologia</a></li>
+    <li><a href="Contato.html">Nossos Contatos</a></li>
+    <li><a href="Ensinos.html#sociedade">Ensinos</a></li>
+  </ul>
+</div>
+
+<main class="subject" role="main">
+  <article class="subject-card" aria-labelledby="artes-title">
+    <h1 id="artes-title">Artes</h1>
+    <p class="lead">Linguagens artísticas e leitura de imagens.</p>
+    <p>História da arte e elementos visuais.</p><p>Práticas de apreciação e criação.</p>
+    <div class="subject-actions">
+      <a href="Ensinos.html" class="btn">Voltar aos Ensinos</a>
+      <a href="principal.html" class="link-ghost">Início</a>
+      <button class="btn-secondary" type="button" data-quiz-open>Questionário</button>
+    </div>
+  <section id="quiz" class="quiz hidden" aria-label="Questionário"></section>
+  <script id="quiz-data" type="application/json">{"questions": [{"question": "Perspectiva cria", "options": ["Som estéreo", "Profundidade visual", "Ritmo musical", "Textura tátil"], "answerIndex": 1, "explain": "Efeito de três dimensões."}, {"question": "Contraste é", "options": ["Semelhança de formas", "Oposição de elementos", "Repetição", "Textura sonora"], "answerIndex": 1, "explain": "Luz x sombra, cores complementares."}, {"question": "Modernismo no Brasil iniciou em", "options": ["1922", "1822", "1970", "2002"], "answerIndex": 0, "explain": "Semana de Arte Moderna de 1922."}, {"question": "Matiz é", "options": ["Altura do som", "Cor em si", "Dureza do material", "Volume"], "answerIndex": 1, "explain": "Atributo da cor."}, {"question": "Planos em teatro definem", "options": ["Iluminação apenas", "Posições no palco", "Tipo de câmera", "Ritmo musical"], "answerIndex": 1, "explain": "Marcam deslocamento e composição cênica."}]}</script>
+  <script src="../JavaScript/quiz.js"></script>
+</article>
+</main>
+
+
+<script src="../JavaScript/menu.js"></script>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

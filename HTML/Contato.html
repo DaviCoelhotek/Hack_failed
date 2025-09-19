@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nossos Contatos • Metodologia Livre</title>
+    <link rel="stylesheet" href="../CSS/Contato.css" />
+    <link rel="icon" href="../assets/img/Logo.png" />
+  
+<link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="principal.html">
+        <img src="../assets/img/Logo.png" alt="Ilustração Educação" class="logoimg" />
+        Metodologia Livre
+      </a>
+  </div>
+<nav aria-label="Navegação principal">
+  <ul class="nav-links">
+    <li><a id="menu-toggle" href="#">☰ Menu</a></li>
+  </ul>
+</nav>
+</header>
+
+<div id="contato-page">
+  <div id="contato-card">
+    <div id="dropdown-menu" class="dropdown hidden">
+      <ul>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="nossa-metodologia.html">Nossa Metodologia</a></li>
+        <li><a href="Contato.html">Nossos Contatos</a></li>
+        <li><a href="Ensinos.html">Ensinos</a></li>
+      </ul>
+  </div>
+
+<!-- TUDO dentro da caixa branca -->
+<main class="hero hero-contato" role="main">
+  <!-- BOTÕES NO TOPO (fixos dentro da caixa branca) -->
+  <section class="contact-switch" aria-label="Alternar seções">
+    <a id="btn-sugestao" href="#sugestao" role="tab" aria-controls="sugestao" aria-selected="true" class="btn">✍️ Enviar sugestão</a>
+    <a id="btn-redes" href="#redes" role="tab" aria-controls="redes" aria-selected="false" class="btn-secondary">🌐 Redes sociais</a>
+  </section>
+
+<!-- Aba: Enviar sugestão -->
+<section id="sugestao" class="tab-content" role="tabpanel" aria-labelledby="btn-sugestao">
+  <h1 class="sugestao">Fale com a gente</h1>
+  <form id="form-sugestao" novalidate>
+    <div class="field">
+      <label for="nome">Seu nome</label>
+      <input id="nome" class="input-de-texto-nome" type="text" placeholder="Seu nome completo" autocomplete="name" required />
+      <div class="field-error" aria-live="polite"></div>
+    </div>
+  <div class="field">
+    <label for="email">Seu e-mail</label>
+    <input id="email" class="input-de-texto-email" type="email" placeholder="voce@exemplo.com" autocomplete="email" required />
+    <div class="field-error" aria-live="polite"></div>
+  </div>
+<div class="field">
+  <label for="sugestao-texto">Sua sugestão</label>
+  <textarea id="sugestao-texto" class="input-de-texto-sugestao" rows="6" placeholder="Descreva sua ideia (mínimo 20 caracteres)" required></textarea>
+  <div class="field-error" aria-live="polite"></div>
+</div>
+<div class="actions">
+  <button id="enviar-btn" class="btn-submit btn" type="submit">Enviar</button>
+</div>
+</form>
+</section>
+
+<!-- Aba: Redes sociais (somente 4, em 2 colunas x 2 linhas) -->
+<section id="redes" class="socials tab-content" role="tabpanel" aria-labelledby="btn-redes" hidden>
+  <h2 class="titulo-redes">Nossas redes</h2>
+  <p class="subtitulo-redes">Siga a Metodologia Livre nas plataformas:</p>
+
+  <div class="social-grid grid-2x2">
+    <a class="social-card insta" href="https://instagram.com/MetodologiaLivre" target="_blank" rel="noopener">
+      <div class="icon" aria-hidden="true">📸</div>
+      <div class="meta">
+        <strong>Instagram</strong>
+        <span>@MetodologiaLivre</span>
+        <span class="slogan">Capture and share the world’s moments.</span>
+      </div>
+  </a>
+
+<a class="social-card youtube" href="#" target="_blank" rel="noopener">
+  <div class="icon" aria-hidden="true">▶️</div>
+  <div class="meta">
+    <strong>YouTube</strong>
+    <span>Metodologia Livre</span>
+    <span class="slogan">Broadcast yourself.</span>
+  </div>
+</a>
+
+<a class="social-card x" href="#" target="_blank" rel="noopener">
+  <div class="icon" aria-hidden="true">✖️</div>
+  <div class="meta">
+    <strong>X</strong>
+    <span>@MetodologiaLivre</span>
+    <span class="slogan">It’s what’s happening.</span>
+  </div>
+</a>
+
+<a class="social-card tiktok" href="#" target="_blank" rel="noopener">
+  <div class="icon" aria-hidden="true">🎵</div>
+  <div class="meta">
+    <strong>TikTok</strong>
+    <span>Metodologia Livre</span>
+    <span class="slogan">Make your day.</span>
+  </div>
+</a>
+</div>
+</section>
+
+<!-- Painel de sucesso -->
+<div id="sucesso-envio" class="done-panel" role="status" hidden>
+  <h3>Obrigado!</h3>
+  <p>Sua sugestão foi enviada.</p>
+  <div class="done-actions">
+    <a href="#" id="nova-sugestao" class="btn btn-primary action-btn">Enviar outra sugestão</a>
+    <a href="../HTML/principal.html" id="voltar-home" class="btn-secondary action-btn">Voltar à página principal</a>
+  </div>
+</div>
+</main>
+</div>
+</div>
+
+<script src="../JavaScript/contato.js"></script>
+<script src="../JavaScript/menu.js"></script>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

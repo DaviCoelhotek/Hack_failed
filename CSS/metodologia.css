@@ -1,0 +1,119 @@
+@import url("principal.css");
+
+.method-page{
+  min-height: calc(100vh - 80px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: clamp(20px, 6vw, 48px);
+}
+.method-card{
+  width: min(960px, 94vw);
+  background: linear-gradient(180deg, #ffffff, #f6fbff);
+  border-radius: 18px;
+  padding: clamp(18px, 4vw, 34px);
+  box-shadow: 0 16px 34px rgba(0,0,0,.12);
+}
+.method-card h1{
+  margin: 0 0 6px 0;
+  font-size: clamp(24px, 3.6vw, 36px);
+  color:#0d2b3a;
+}
+.method-card .lead{
+  color:#516b7a;
+  margin: 0 0 12px 0;
+}
+.method-card h2{
+  color:#1d5fa3;
+  margin: 16px 0 8px 0;
+  font-size: clamp(18px, 2.2vw, 24px);
+}
+.method-card p, .method-card li{
+  color:#2a3e4c;
+  line-height:1.65;
+  font-size: 16px;
+}
+.method-list{
+  margin: 8px 0 0 18px;
+}
+.tip{
+  background:#e7f1fb;
+  border:1px solid #c7def9;
+  padding: 12px 14px;
+  border-radius: 12px;
+  margin-top: 12px;
+}
+.method-actions{
+  display:flex; gap:10px; margin-top: 16px; flex-wrap: wrap;
+}
+.timer{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding: 10px 16px; border-radius: 10px;
+  background:#1d5fa3; color:#fff; text-decoration:none; font-weight:800;
+}
+.timer:hover{ background:#154e84; color:#ffd05b; }
+
+
+/* Align actions and match 'Início' style to subjects */
+.method-actions{ display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+.method-card .btn{ display:inline-flex; align-items:center; justify-content:center; }
+
+.link-ghost{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding: 10px 14px; border-radius: 10px;
+  text-decoration: none; font-weight: 800;
+  color: #1d5fa3; border: 2px solid rgba(29,95,163,.18);
+  background: transparent;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+.link-ghost:hover{ background: rgba(29,95,163,.08); color: #154e84; border-color: rgba(29,95,163,.36); }
+
+/* Pomodoro UI */
+.pomo{
+  display:grid; gap:14px;
+  grid-template-columns: 1fr;
+  margin-top: 10px;
+}
+.pomo-display{
+  font-size: clamp(40px, 9vw, 64px);
+  font-weight: 900;
+  color:#0d2b3a;
+  text-align:center;
+}
+.pomo-controls{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+.pomo-chip{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:8px 12px; border-radius: 999px; font-weight:800;
+  border: 2px solid rgba(29,95,163,.18); color:#154e84; background:#e7f1fb;
+}
+.pomo-chip.active{ background:#1d5fa3; color:#fff; border-color:#1d5fa3; }
+.pomo-meta{ text-align:center; color:#516b7a; font-size:14px; }
+
+/* === Pomodoro — padronizar botões e dar respiro (Levi fix) === */
+.pomo-controls{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-block:8px; /* espaço antes e depois dos três botões */
+}
+
+#pomo-start, #pomo-pause, #pomo-reset{
+  padding:10px 16px;
+  border-radius:10px;
+  font-weight:800;
+  min-width:110px;
+  text-align:center;
+  border:2px solid #1d5fa3;
+  background:#1d5fa3;
+  color:#fff;
+  transition: background .2s, border-color .2s, color .2s, transform .05s;
+}
+#pomo-start:hover, #pomo-pause:hover, #pomo-reset:hover{
+  background:#154e84;
+  border-color:#154e84;
+  color:#ffd05b;
+}
+#pomo-start:active, #pomo-pause:active, #pomo-reset:active{
+  transform: translateY(1px);
+}

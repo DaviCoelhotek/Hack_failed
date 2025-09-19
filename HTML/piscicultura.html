@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piscicultura • Metodologia Livre</title>
+    <link rel="stylesheet" href="../CSS/materia.css" />
+    <link rel="icon" href="../assets/img/Logo.png" />
+  
+<link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="principal.html">
+        <img src="../assets/img/Logo.png" alt="Logo Metodologia Livre" class="logoimg" />
+        Metodologia Livre
+      </a>
+  </div>
+<nav aria-label="Navegação principal">
+  <ul class="nav-links">
+    <li><a id="menu-toggle" href="#" aria-controls="dropdown-menu" aria-expanded="false">☰ Menu</a></li>
+  </ul>
+</nav>
+</header>
+
+<div id="dropdown-menu" class="dropdown hidden" role="menu" aria-hidden="true">
+  <ul>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="nossa-metodologia.html">Nossa Metodologia</a></li>
+    <li><a href="Contato.html">Nossos Contatos</a></li>
+    <li><a href="Ensinos.html#agricola">Ensinos</a></li>
+  </ul>
+</div>
+
+<main class="subject" role="main">
+  <article class="subject-card" aria-labelledby="piscicultura-title">
+    <h1 id="piscicultura-title">Piscicultura</h1>
+    <p class="lead">Cultivo de peixes de água doce.</p>
+    <p>Qualidade da água e densidade.</p><p>Nutrição e sanidade.</p>
+    <div class="subject-actions">
+      <a href="Ensinos.html" class="btn">Voltar aos Ensinos</a>
+      <a href="principal.html" class="link-ghost">Início</a>
+      <button class="btn-secondary" type="button" data-quiz-open>Questionário</button>
+    </div>
+  <section id="quiz" class="quiz hidden" aria-label="Questionário"></section>
+  <script id="quiz-data" type="application/json">{"questions": [{"question": "Tilápia é espécie", "options": ["Marinha", "De água doce", "Anfíbia", "Aérea"], "answerIndex": 1, "explain": "Comum em tanques-redes e viveiros."}, {"question": "Oxigênio dissolvido baixo", "options": ["Afoga peixes", "Aumenta crescimento", "Não afeta", "Substitui ração"], "answerIndex": 0, "explain": "Pode causar mortalidade."}, {"question": "Densidade de estocagem", "options": ["Número de peixes por volume", "Cor do tanque", "Tipo de ração", "pH da chuva"], "answerIndex": 0, "explain": "Ajustada ao sistema."}, {"question": "Alimentação deve ser", "options": ["Excessiva", "Balanceada por fase", "Aleatória", "Apenas natural"], "answerIndex": 1, "explain": "Taxas conforme tamanho e temperatura."}, {"question": "Alevino é", "options": ["Peixe jovem", "Doença", "Ração", "Filtro"], "answerIndex": 0, "explain": "Estágio inicial após larva."}]}</script>
+  <script src="../JavaScript/quiz.js"></script>
+</article>
+</main>
+
+
+<script src="../JavaScript/menu.js"></script>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

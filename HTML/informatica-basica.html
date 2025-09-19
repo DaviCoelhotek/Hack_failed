@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informática Básica • Metodologia Livre</title>
+    <link rel="stylesheet" href="../CSS/materia.css" />
+    <link rel="icon" href="../assets/img/Logo.png" />
+  
+<link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="principal.html">
+        <img src="../assets/img/Logo.png" alt="Logo Metodologia Livre" class="logoimg" />
+        Metodologia Livre
+      </a>
+  </div>
+<nav aria-label="Navegação principal">
+  <ul class="nav-links">
+    <li><a id="menu-toggle" href="#" aria-controls="dropdown-menu" aria-expanded="false">☰ Menu</a></li>
+  </ul>
+</nav>
+</header>
+
+<div id="dropdown-menu" class="dropdown hidden" role="menu" aria-hidden="true">
+  <ul>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="nossa-metodologia.html">Nossa Metodologia</a></li>
+    <li><a href="Contato.html">Nossos Contatos</a></li>
+    <li><a href="Ensinos.html#tecnologia">Ensinos</a></li>
+  </ul>
+</div>
+
+<main class="subject" role="main">
+  <article class="subject-card" aria-labelledby="informatica-basica-title">
+    <h1 id="informatica-basica-title">Informática Básica</h1>
+    <p class="lead">Noções essenciais para usar o computador no dia a dia.</p>
+    <p>Sistemas, arquivos, pastas e aplicativos comuns.</p><p>Boas práticas de organização e backups.</p>
+    <div class="subject-actions">
+      <a href="Ensinos.html" class="btn">Voltar aos Ensinos</a>
+      <a href="principal.html" class="link-ghost">Início</a>
+      <button class="btn-secondary" type="button" data-quiz-open>Questionário</button>
+    </div>
+  <section id="quiz" class="quiz hidden" aria-label="Questionário"></section>
+  <script id="quiz-data" type="application/json">{"questions": [{"question": "Atalho para copiar no Windows", "options": ["Ctrl+C", "Ctrl+V", "Ctrl+X", "Alt+F4"], "answerIndex": 0, "explain": "Copiar: Ctrl+C; Colar: Ctrl+V; Recortar: Ctrl+X."}, {"question": "Unidade de armazenamento", "options": ["BPM", "JPEG", "Gigabyte", "HTML"], "answerIndex": 2, "explain": "Gigabyte (GB) é unidade de armazenamento."}, {"question": "Sistema operacional é", "options": ["Um hardware", "Conjunto de programas que gerenciam o computador", "Um antivírus", "Uma planilha"], "answerIndex": 1, "explain": "Ex.: Windows, Linux, macOS."}, {"question": "Extensão típica de planilha", "options": [".pptx", ".xlsx", ".mp3", ".exe"], "answerIndex": 1, "explain": "Arquivos do Excel usam .xlsx."}, {"question": "Backup serve para", "options": ["Acelerar internet", "Salvar cópias de segurança", "Baixar músicas", "Melhorar a placa de vídeo"], "answerIndex": 1, "explain": "Cópias de segurança previnem perda de dados."}]}</script>
+  <script src="../JavaScript/quiz.js"></script>
+</article>
+</main>
+
+
+<script src="../JavaScript/menu.js"></script>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

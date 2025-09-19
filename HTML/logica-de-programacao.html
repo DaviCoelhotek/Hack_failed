@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lógica de Programação • Metodologia Livre</title>
+    <link rel="stylesheet" href="../CSS/materia.css" />
+    <link rel="icon" href="../assets/img/Logo.png" />
+  
+<link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="principal.html">
+        <img src="../assets/img/Logo.png" alt="Logo Metodologia Livre" class="logoimg" />
+        Metodologia Livre
+      </a>
+  </div>
+<nav aria-label="Navegação principal">
+  <ul class="nav-links">
+    <li><a id="menu-toggle" href="#" aria-controls="dropdown-menu" aria-expanded="false">☰ Menu</a></li>
+  </ul>
+</nav>
+</header>
+
+<div id="dropdown-menu" class="dropdown hidden" role="menu" aria-hidden="true">
+  <ul>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="nossa-metodologia.html">Nossa Metodologia</a></li>
+    <li><a href="Contato.html">Nossos Contatos</a></li>
+    <li><a href="Ensinos.html#tecnologia">Ensinos</a></li>
+  </ul>
+</div>
+
+<main class="subject" role="main">
+  <article class="subject-card" aria-labelledby="logica-de-programacao-title">
+    <h1 id="logica-de-programacao-title">Lógica de Programação</h1>
+    <p class="lead">Pensar como programador para resolver problemas.</p>
+    <p>Tipos de dados, controle de fluxo e funções.</p><p>Algoritmos, decomposição e testes.</p>
+    <div class="subject-actions">
+      <a href="Ensinos.html" class="btn">Voltar aos Ensinos</a>
+      <a href="principal.html" class="link-ghost">Início</a>
+      <button class="btn-secondary" type="button" data-quiz-open>Questionário</button>
+    </div>
+  <section id="quiz" class="quiz hidden" aria-label="Questionário"></section>
+  <script id="quiz-data" type="application/json">{"questions": [{"question": "Operador lógico AND é verdadeiro quando", "options": ["p ou q", "apenas p", "apenas q", "p e q"], "answerIndex": 3, "explain": "AND exige as duas condições verdadeiras."}, {"question": "Estrutura que repete bloco", "options": ["while", "if", "switch", "break"], "answerIndex": 0, "explain": "Laços/loops: while/for."}, {"question": "Variável armazena", "options": ["Apenas textos", "Apenas números", "Dados que podem mudar", "Somente imagens"], "answerIndex": 2, "explain": "Pode armazenar diferentes tipos."}, {"question": "Algoritmo é", "options": ["Linguagem de máquina", "Sequência de passos para resolver problema", "Arquivo de vídeo", "Banco de dados"], "answerIndex": 1, "explain": "Receita de etapas bem definidas."}, {"question": "Pseudocódigo serve para", "options": ["Executar no navegador", "Planejar lógica sem sintaxe específica", "Gerar imagens", "Formatar texto"], "answerIndex": 1, "explain": "Ajuda a pensar o programa."}]}</script>
+  <script src="../JavaScript/quiz.js"></script>
+</article>
+</main>
+
+
+<script src="../JavaScript/menu.js"></script>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

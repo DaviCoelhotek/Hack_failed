@@ -1,0 +1,104 @@
+@import url("principal.css");
+
+/* ===== Base e container ===== */
+html, body{ height:100%; margin:0; font-family:Arial, sans-serif; }
+.hero{
+  width:min(1100px, 92vw);
+  margin:28px auto;
+  background:#fff;
+  border-radius:28px;
+  box-shadow:0 14px 35px rgba(3,22,52,.12);
+  padding:0 18px 28px;   /* topo = 0 para colar os botões no topo */
+  overflow:hidden;
+  position:relative;
+}
+
+/* ===== Botões no TOPO (fixos dentro da caixa branca) ===== */
+.contact-switch{
+  position:sticky;   /* fixa durante o scroll, mas só dentro da caixa branca */
+  top:0;
+  z-index:15;
+  background:#fff;
+  display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap;
+  padding:14px 12px;
+  margin:0 auto 18px;
+  border-bottom:1px solid rgba(13,40,71,.06);
+  border-top-left-radius:28px;
+  border-top-right-radius:28px;
+}
+.contact-switch a{ text-decoration:none; }
+.btn, .btn-secondary{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  padding:10px 16px; border-radius:999px; font-weight:700; line-height:1;
+  border:2px solid #1E63A6; user-select:none;
+  transition:transform .06s, box-shadow .2s, background-color .2s, color .2s;
+}
+.btn{ background:#1E63A6; color:#fff; box-shadow:0 2px 0 rgba(0,0,0,.12); }
+.btn:hover{ transform:translateY(-1px); box-shadow:0 6px 14px rgba(30,99,166,.28); }
+.btn-secondary{ background:#fff; color:#1E63A6; }
+.btn-secondary:hover{ background:#f5faff; }
+#btn-sugestao[aria-selected="true"], #btn-redes[aria-selected="true"]{ box-shadow:0 6px 16px rgba(30,99,166,.28); }
+
+/* ===== Abas ===== */
+.tab-content{ display:block; }
+.tab-content[hidden]{ display:none !important; }
+
+/* ===== Formulário ===== */
+#sugestao{ max-width:900px; margin:0 auto; padding:0 12px; box-sizing:border-box; }
+#sugestao .sugestao{ text-align:center; margin:12px auto 24px; color:#37474f; }
+.field{ display:flex; flex-direction:column; gap:8px; margin:14px auto; width:min(780px,100%); }
+.field label{ font-weight:600; color:#37474f; }
+.field input, .field textarea{
+  width:100%; padding:12px 14px; border:1px solid #cfd8dc; border-radius:10px; font-size:16px; outline:none; background:#fafcff;
+}
+.field textarea{ min-height:140px; resize:vertical; }
+.field input:focus, .field textarea:focus{ border-color:#42a5f5; box-shadow:0 0 0 3px rgba(66,165,245,.15); }
+.actions{ display:flex; justify-content:center; margin-top:10px; }
+#enviar-btn{ min-width:140px; height:40px; background:#42a5f5; color:#fff; border:none; border-radius:10px; font-weight:700; cursor:pointer; }
+#enviar-btn:hover{ background:#1e88e5; }
+
+/* ===== Redes (4 cards em duas duplas) ===== */
+.socials{ max-width:980px; margin:0 auto; padding:0 16px; box-sizing:border-box; text-align:center; }
+.titulo-redes{ margin-top:4px; }
+.social-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(260px,1fr)); /* 2 colunas */
+  gap:16px;
+  margin-top:12px;
+}
+/* no mobile, vira 1 coluna */
+@media (max-width: 720px){
+  .social-grid{ grid-template-columns:1fr; }
+}
+
+.social-card{
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;
+  min-height:140px; padding:16px; border-radius:16px; background:#fff; text-decoration:none; color:#0d2847;
+  box-shadow:0 4px 16px rgba(0,0,0,.08); border:1px solid rgba(13,40,71,.08);
+  transition:transform .06s ease, box-shadow .2s ease;
+}
+.social-card:hover{ transform:translateY(-2px); box-shadow:0 8px 22px rgba(0,0,0,.12); }
+.social-card .icon{ font-size:22px; width:42px; height:42px; display:grid; place-items:center; background:#f3f6fb; border-radius:12px; }
+.social-card .meta{ text-align:center; }
+.social-card .meta strong{ display:block; font-weight:800; }
+.social-card .meta span{ display:block; opacity:.9; }
+.social-card .meta .slogan{ opacity:.7; }
+
+/* ===== Painel de sucesso ===== */
+.done-panel{ max-width:720px; margin:24px auto 0; text-align:center; background:#f6fff6; border:1px solid #bfe6bf; color:#0f5132; border-radius:14px; padding:18px; }
+.done-actions{ display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:10px; }
+.done-actions .btn{ background:#2a7ae4; color:#fff; }
+.done-actions .btn-secondary{ background:#fff; color:#1E63A6; }
+
+/* ===== Util ===== */
+.hidden{ display:none !important; }
+
+
+/* === Força layout em coluna: botões no topo e conteúdo abaixo === */
+.hero.hero-contato{
+  display:block !important;
+  padding-top:0 !important;
+}
+
+
+.btn-submit:disabled{ opacity:.7; cursor:not-allowed; filter:grayscale(20%); }

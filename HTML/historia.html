@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>História • Metodologia Livre</title>
+    <link rel="stylesheet" href="../CSS/materia.css" />
+    <link rel="icon" href="../assets/img/Logo.png" />
+  
+<link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="principal.html">
+        <img src="../assets/img/Logo.png" alt="Logo Metodologia Livre" class="logoimg" />
+        Metodologia Livre
+      </a>
+  </div>
+<nav aria-label="Navegação principal">
+  <ul class="nav-links">
+    <li><a id="menu-toggle" href="#" aria-controls="dropdown-menu" aria-expanded="false">☰ Menu</a></li>
+  </ul>
+</nav>
+</header>
+
+<div id="dropdown-menu" class="dropdown hidden" role="menu" aria-hidden="true">
+  <ul>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="nossa-metodologia.html">Nossa Metodologia</a></li>
+    <li><a href="Contato.html">Nossos Contatos</a></li>
+    <li><a href="Ensinos.html#sociedade">Ensinos</a></li>
+  </ul>
+</div>
+
+<main class="subject" role="main">
+  <article class="subject-card" aria-labelledby="historia-title">
+    <h1 id="historia-title">História</h1>
+    <p class="lead">Processos históricos e fontes.</p>
+    <p>Da Antiguidade à atualidade.</p><p>Contexto, permanências e rupturas.</p>
+    <div class="subject-actions">
+      <a href="Ensinos.html" class="btn">Voltar aos Ensinos</a>
+      <a href="principal.html" class="link-ghost">Início</a>
+      <button class="btn-secondary" type="button" data-quiz-open>Questionário</button>
+    </div>
+  <section id="quiz" class="quiz hidden" aria-label="Questionário"></section>
+  <script id="quiz-data" type="application/json">{"questions": [{"question": "Assinale a alternativa correta", "options": ["A", "B", "C", "D"], "answerIndex": 0, "explain": "Questão genérica para avaliação."}, {"question": "Conceito principal está ligado a", "options": ["X", "Y", "Z", "W"], "answerIndex": 1, "explain": "Escolha didática."}, {"question": "Exemplo de aplicação", "options": ["1", "2", "3", "4"], "answerIndex": 2, "explain": "Demonstração prática."}, {"question": "Boa prática é", "options": ["Opção 1", "Opção 2", "Opção 3", "Opção 4"], "answerIndex": 3, "explain": "Recomendada pela área."}, {"question": "Medida adequada", "options": ["Alpha", "Beta", "Gama", "Delta"], "answerIndex": 0, "explain": "Depende do contexto."}]}</script>
+  <script src="../JavaScript/quiz.js"></script>
+</article>
+</main>
+
+
+<script src="../JavaScript/menu.js"></script>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

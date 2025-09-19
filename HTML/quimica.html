@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Química • Metodologia Livre</title>
+    <link rel="stylesheet" href="../CSS/materia.css" />
+    <link rel="icon" href="../assets/img/Logo.png" />
+  
+<link rel="stylesheet" href="assets/css/base.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="principal.html">
+        <img src="../assets/img/Logo.png" alt="Logo Metodologia Livre" class="logoimg" />
+        Metodologia Livre
+      </a>
+  </div>
+<nav aria-label="Navegação principal">
+  <ul class="nav-links">
+    <li><a id="menu-toggle" href="#" aria-controls="dropdown-menu" aria-expanded="false">☰ Menu</a></li>
+  </ul>
+</nav>
+</header>
+
+<div id="dropdown-menu" class="dropdown hidden" role="menu" aria-hidden="true">
+  <ul>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="nossa-metodologia.html">Nossa Metodologia</a></li>
+    <li><a href="Contato.html">Nossos Contatos</a></li>
+    <li><a href="Ensinos.html">Ensinos</a></li>
+  </ul>
+</div>
+
+<main class="subject" role="main">
+  <article class="subject-card" aria-labelledby="quimica-title">
+    <h1 id="quimica-title">Química</h1>
+    <p class="lead">Matéria, transformações e energia — da estrutura atômica às reações.</p>
+    <p>Exploramos propriedades periódicas, ligações químicas e geometria molecular para entender por que as substâncias se comportam como se comportam.</p><p>Estequiometria, soluções e reações comuns ajudam a conectar teoria e prática de laboratório.</p>
+    <div class="subject-actions">
+      <a href="Ensinos.html" class="btn">Voltar aos Ensinos</a>
+      <a href="principal.html" class="link-ghost">Início</a>
+      <button class="btn-secondary" type="button" data-quiz-open>Questionário</button>
+    </div>
+  <section id="quiz" class="quiz hidden" aria-label="Questionário"></section>
+  <script id="quiz-data" type="application/json">{"questions": [{"question": "Número atômico (Z) indica:", "options": ["Nº de nêutrons", "Nº de elétrons em qualquer átomo", "Nº de prótons", "Massa do átomo"], "answerIndex": 2, "explain": "Z = número de prótons. Em átomo neutro, Z = elétrons."}, {"question": "Ligação iônica ocorre entre:", "options": ["Dois ametais", "Metal e ametal", "Dois metais", "Moléculas polares"], "answerIndex": 1, "explain": "Envolve transferência de elétrons entre metal (cede) e ametal (recebe)."}, {"question": "pH < 7 indica:", "options": ["Meio neutro", "Meio básico", "Meio ácido", "Autoionização da água"], "answerIndex": 2, "explain": "Escala: pH 7 neutro, <7 ácido, >7 básico."}, {"question": "Na reação A + B → AB, o tipo é:", "options": ["Decomposição", "Síntese", "Dupla troca", "Oxirredução"], "answerIndex": 1, "explain": "Formação de um produto a partir de reagentes simples = síntese."}, {"question": "Estequiometria relaciona:", "options": ["Velocidade de reação", "Proporções de reagentes e produtos", "Pontos de ebulição", "Energia de ativação"], "answerIndex": 1, "explain": "Calcula quantidades (mols/massas) entre reagentes e produtos."}]}</script>
+    <script src="../JavaScript/quiz.js"></script>
+  </article>
+</main>
+
+
+<script src="../JavaScript/menu.js"></script>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
